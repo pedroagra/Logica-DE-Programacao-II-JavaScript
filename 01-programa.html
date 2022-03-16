@@ -2,11 +2,11 @@
 
 <script>
 
-    var tela = document.querySelector("canvas");
-    var pincel = tela.getContext('2d');
+    var tela = document.querySelector("canvas"); /* função para pegar coisas do mundo html para jogar dentro do javaScript e manipular.*/
+    var pincel = tela.getContext('2d'); /* tela. é para dar um pincel e o tipo é o getContext('2d') */
 
-    pincel.fillStyle = 'lightgrey';
-    pincel.fillRect(0, 0, 800, 600);
+    pincel.fillStyle = 'lightgrey'; /*fillStyle estilo de preenchimento que recebe uma propriedade, aceita receber um valor. se atentar a ordem.*/
+    pincel.fillRect(0, 0, 600, 400); /*fill preencher rect retângulo (para indicar onde realizar o preenchimento usamos o plano cartesiano */
 
     pincel.fillStyle = 'green';
     pincel.fillRect(0, 0, 200, 400);
@@ -15,15 +15,15 @@
     pincel.fillRect(400, 0, 200, 400);
 
     pincel.fillStyle = 'yellow';
-    pincel.beginPath();
-    pincel.moveTo(300, 200);
-    pincel.lineTo(200, 400);
+    pincel.beginPath();           /*iniciar um novo caminho*/
+    pincel.moveTo(300, 200);      /*para desenhar o triângulo preciso indicar para o sistema onde está o primeiro ponto. */
+    pincel.lineTo(200, 400);        /*fazer uma linha até tal posição*/
     pincel.lineTo(400, 400);
-    pincel.fill();
+    pincel.fill(); /*preencher*/
 
     pincel.fillStyle = 'blue';
-    pincel.beginPath();
-    pincel.arc(300, 200, 50, 0,2 * 3.14);
+    pincel.beginPath(); 
+    pincel.arc(300, 200, 50, 0,2 * 3.14); /*arc para traçar o círculo*/
     pincel.fill();
 
 </script>
